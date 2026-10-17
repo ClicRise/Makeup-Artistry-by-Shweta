@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
-import { MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, MapPin, Phone, Star } from "lucide-react";
 import logoFull from "@/assets/logo-full.png";
 import { meta } from "@/components/detail-pages";
 import { Eyebrow } from "@/components/site";
-import { ADDRESS, MAPS_DIRECTIONS_URL, PHONE, enquiryMessage, enquiryOptions, waLink } from "@/lib/site";
+import { ADDRESS, GOOGLE_LISTING_URL, GOOGLE_REVIEW_URL, MAPS_DIRECTIONS_URL, PHONE, enquiryMessage, enquiryOptions, waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (s: Record<string, unknown>): { service?: string | undefined } => ({ service: typeof s["service"] === "string" ? (s["service"] as string) : undefined }),
@@ -66,6 +66,15 @@ function Contact() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background"><MapPin className="h-4 w-4" /></span>
                 <span><span className="block text-xs text-muted-foreground">Studio</span><span className="font-medium">{ADDRESS}</span></span>
               </div>
+              <a href={GOOGLE_LISTING_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl bg-blush/35 p-4 text-sm text-primary transition hover:bg-blush/60">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background"><ArrowUpRight className="h-4 w-4" /></span>
+                <span><span className="block text-xs text-muted-foreground">Google listing</span><span className="font-medium">View our business profile</span></span>
+              </a>
+              <a href={GOOGLE_REVIEW_URL}
+                target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl bg-blush/35 p-4 text-sm text-primary transition hover:bg-blush/60">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background"><Star className="h-4 w-4 text-rosegold" /></span>
+                <span><span className="block text-xs text-muted-foreground">Google reviews</span><span className="font-medium">Leave us a review</span></span>
+              </a>
             </div>
             <div className="mt-6 overflow-hidden rounded-2xl border border-border">
               <iframe
@@ -77,14 +86,16 @@ function Contact() {
                 allowFullScreen
               />
             </div>
-            <a
-              href={MAPS_DIRECTIONS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex text-sm font-medium text-primary underline-offset-4 hover:underline"
-            >
-              Open location in Google Maps →
-            </a>
+            <div className="mt-4 grid gap-2">
+              <a
+                href={MAPS_DIRECTIONS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between gap-3 rounded-xl border border-border bg-background px-4 py-3 text-sm font-medium text-primary transition hover:bg-blush/30"
+              >
+                <span>Directions in Google Maps</span><span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </aside>
         <form onSubmit={submit} className="rounded-3xl border border-border bg-card p-6 shadow-soft md:p-9">

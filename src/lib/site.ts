@@ -12,6 +12,8 @@ import eyeRoseGold from "@/assets/eye-rosegold.jpg";
 export const PHONE = "9997776650";
 export const ADDRESS = "Shyam Arcade, Meerut";
 export const MAPS_DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=28.9721169%2C77.6812246";
+export const GOOGLE_LISTING_URL = "https://share.google/o5Va13Rfs3o7nXBWx";
+export const GOOGLE_REVIEW_URL = "https://www.google.com/search?sca_esv=5d7a863cc503da30&rlz=1C1ONGR_en-GBIN1075IN1075&sxsrf=APpeQnuLvZ8ue7GIpkYA_FENFZ8gIOlI7g:1792280155565&kgmid=/g/11p1kqf1cb&q=Makeup+artistry+by+Shweta&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=fe29cccbc63fad17&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1#lrd=0x390c65580d069965:0xced744d918131b7d,3,,,,";
 export const INSTAGRAM_HANDLE = "@makeup_artistry_by_shweta_";
 export const INSTAGRAM_URL = "https://www.instagram.com/makeup_artistry_by_shweta_/";
 export const OFFER_VALID_UNTIL = "29 October 2026";

@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { Instagram, MapPin, Menu, Phone, X } from "lucide-react";
+import { ArrowUpRight, Instagram, MapPin, Menu, Phone, Star, X } from "lucide-react";
 import logoMark from "@/assets/logo-mark.png";
-import { ADDRESS, INSTAGRAM_HANDLE, INSTAGRAM_URL, MAPS_DIRECTIONS_URL, PHONE, bookingMessage, waLink } from "@/lib/site";
+import { ADDRESS, GOOGLE_LISTING_URL, GOOGLE_REVIEW_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL, MAPS_DIRECTIONS_URL, PHONE, bookingMessage, waLink } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -115,24 +115,44 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="mt-20 bg-primary px-6 py-12 text-primary-foreground">
-      <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
+    <footer className="mt-20 bg-[#2a0f16] px-6 text-[#f7ece1]">
+      <div className="mx-auto grid max-w-6xl gap-10 py-12 md:grid-cols-[1.15fr_1fr_0.65fr] md:gap-12 md:py-14">
         <div>
-          <p className="font-display text-2xl">Makeup Artistry by Shweta</p>
-          <p className="mt-2 text-sm opacity-80">Certified makeup artist in Meerut</p>
+          <div className="flex items-center gap-4">
+            <img src={logoMark} alt="" className="h-14 w-14 object-contain" />
+            <div>
+              <p className="font-display text-2xl">Makeup Artistry</p>
+              <p className="font-display text-lg italic text-rosegold">by Shweta</p>
+            </div>
+          </div>
+          <p className="mt-5 max-w-sm text-sm leading-relaxed text-[#f7ece1]/70">Certified makeup artist in Meerut for bridal, pre-bridal and festive looks.</p>
         </div>
-        <div className="space-y-2 text-sm">
-          <a href={`tel:+91${PHONE}`} className="flex items-center gap-2 hover:underline"><Phone className="h-4 w-4" /> {PHONE}</a>
-          <a href={MAPS_DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline"><MapPin className="h-4 w-4" /> {ADDRESS} · Get directions</a>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline"><Instagram className="h-4 w-4" /> {INSTAGRAM_HANDLE}</a>
+        <div>
+          <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-rosegold">Get in touch</h2>
+          <div className="space-y-3 text-sm text-[#f7ece1]/80">
+            <a href={`tel:+91${PHONE}`} className="flex items-center gap-3 transition hover:text-[#f7ece1]"><Phone className="h-4 w-4 shrink-0 text-rosegold" /> {PHONE}</a>
+            <a href={MAPS_DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition hover:text-[#f7ece1]"><MapPin className="h-4 w-4 shrink-0 text-rosegold" /> {ADDRESS} · Get directions</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition hover:text-[#f7ece1]"><Instagram className="h-4 w-4 shrink-0 text-rosegold" /> {INSTAGRAM_HANDLE}</a>
+          </div>
+          <div className="mt-5 grid gap-2 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+            <a href={GOOGLE_LISTING_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl border border-[#f7ece1]/20 px-3 py-2.5 text-xs font-medium transition hover:border-rosegold/70 hover:bg-[#f7ece1]/5"><ArrowUpRight className="h-4 w-4 text-rosegold" /> Google listing</a>
+            <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl border border-[#f7ece1]/20 px-3 py-2.5 text-xs font-medium transition hover:border-rosegold/70 hover:bg-[#f7ece1]/5"><Star className="h-4 w-4 text-rosegold" /> Leave a review</a>
+          </div>
         </div>
-        <div className="flex flex-col gap-2 text-sm">
-          <Link to="/services" className="hover:underline">Services</Link>
-          <Link to="/festival-offers" className="hover:underline">Festival Offers</Link>
-          <Link to="/contact" className="hover:underline">Send an enquiry</Link>
+        <div>
+          <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-rosegold">Explore</h2>
+          <nav aria-label="Footer navigation" className="flex flex-col gap-3 text-sm text-[#f7ece1]/80">
+            <Link to="/portfolio" className="transition hover:text-[#f7ece1]">Portfolio</Link>
+            <Link to="/services" className="transition hover:text-[#f7ece1]">Services</Link>
+            <Link to="/festival-offers" className="transition hover:text-[#f7ece1]">Festival Offers</Link>
+            <Link to="/about" className="transition hover:text-[#f7ece1]">About</Link>
+            <Link to="/contact" className="transition hover:text-[#f7ece1]">Contact</Link>
+          </nav>
         </div>
       </div>
-      <p className="mx-auto mt-10 max-w-6xl text-xs opacity-60">© {new Date().getFullYear()} Makeup Artistry by Shweta</p>
+      <div className="border-t border-[#f7ece1]/15">
+        <p className="mx-auto max-w-6xl py-5 text-xs text-[#f7ece1]/55">© {new Date().getFullYear()} Makeup Artistry by Shweta</p>
+      </div>
     </footer>
   );
 }
