@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Instagram, MapPin, Menu, Phone, X } from "lucide-react";
 import logoMark from "@/assets/logo-mark.png";
-import { ADDRESS, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE, bookingMessage, waLink } from "@/lib/site";
+import { ADDRESS, INSTAGRAM_HANDLE, INSTAGRAM_URL, MAPS_DIRECTIONS_URL, PHONE, bookingMessage, waLink } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -123,7 +123,7 @@ export function Footer() {
         </div>
         <div className="space-y-2 text-sm">
           <a href={`tel:+91${PHONE}`} className="flex items-center gap-2 hover:underline"><Phone className="h-4 w-4" /> {PHONE}</a>
-          <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> {ADDRESS}</p>
+          <a href={MAPS_DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline"><MapPin className="h-4 w-4" /> {ADDRESS} · Get directions</a>
           <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline"><Instagram className="h-4 w-4" /> {INSTAGRAM_HANDLE}</a>
         </div>
         <div className="flex flex-col gap-2 text-sm">

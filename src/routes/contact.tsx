@@ -5,7 +5,7 @@ import { MapPin, Phone } from "lucide-react";
 import logoFull from "@/assets/logo-full.png";
 import { meta } from "@/components/detail-pages";
 import { Eyebrow } from "@/components/site";
-import { ADDRESS, PHONE, enquiryMessage, enquiryOptions, waLink } from "@/lib/site";
+import { ADDRESS, MAPS_DIRECTIONS_URL, PHONE, enquiryMessage, enquiryOptions, waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (s: Record<string, unknown>): { service?: string | undefined } => ({ service: typeof s["service"] === "string" ? (s["service"] as string) : undefined }),
@@ -78,7 +78,7 @@ function Contact() {
               />
             </div>
             <a
-              href="https://www.google.com/maps/place/Makeup+artistry+by+Shweta/@28.972122,77.6811118,21z/data=!4m22!1m15!4m14!1m6!1m2!1s0x390c65003eb15619:0x5a1208afe45f379d!2sShyam+Arcade,+XMCJ%2BRFV,+Jwala+Nagar,+Naval+Vihar,+Meerut,+Uttar+Pradesh+250002!2m2!1d77.6811605!2d28.9721084!1m6!1m2!1s0x390c65580d069965:0xced744d918131b7d!2sMakeup+artistry+by+Shweta,+Shyam+arcade,+near+signature+hotel,+Jwala+Nagar,+Naval+Vihar,+Meerut,+Uttar+Pradesh+250002!2m2!1d77.6812246!2d28.9721169!3m5!1s0x390c65580d069965:0xced744d918131b7d!8m2!3d28.9721169!4d77.6812246!16s%2Fg%2F11p1kqf1cb?entry=ttu"
+              href={MAPS_DIRECTIONS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex text-sm font-medium text-primary underline-offset-4 hover:underline"
