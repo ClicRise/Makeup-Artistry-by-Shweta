@@ -11,7 +11,7 @@ bun install
 bun run dev
 ```
 
-Pushing to `main` builds the static site and deploys it to GitHub Pages through `.github/workflows/pages.yml`.
+Before the first deployment, open **Settings → Pages** in the GitHub repository and set **Build and deployment → Source** to **GitHub Actions**. Pushing to `main` then builds the static site and deploys it through `.github/workflows/pages.yml`.
 
 ## Built with
 
