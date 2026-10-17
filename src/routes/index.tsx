@@ -23,10 +23,6 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#2a0f16] via-[#2a0f16]/85 to-[#2a0f16]/20" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2a0f16]/80 via-transparent to-transparent" aria-hidden />
         <div className="relative mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-center px-6 py-20 md:py-28">
-          <p className="inline-flex w-fit items-center gap-3 rounded-full border border-[#f7ece1]/20 bg-[#2a0f16]/30 px-4 py-2 text-[11px] uppercase tracking-[0.25em] text-[#f7ece1]/90 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-rosegold" aria-hidden="true" />
-            Makeup Artistry by Shweta <span className="text-rosegold">·</span> Meerut
-          </p>
           <h1 className="mt-7 max-w-2xl font-display text-5xl leading-[1.02] text-[#f7ece1] md:text-7xl">
             For the
             <span className="block italic text-rosegold">Bride in You</span>
