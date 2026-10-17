@@ -22,18 +22,31 @@ function Index() {
         <img src={images.brideRedGold} alt="Indian bride in red and gold lehenga with bridal makeup" className="absolute inset-0 h-full w-full object-cover object-[70%_center] opacity-90 md:object-right" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#2a0f16] via-[#2a0f16]/85 to-[#2a0f16]/20" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2a0f16]/80 via-transparent to-transparent" aria-hidden />
-        <div className="relative mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-center px-6 py-24 md:py-32">
-          <p className="text-xs uppercase tracking-[0.35em] text-rosegold">Makeup Artistry by Shweta · Meerut</p>
-          <h1 className="mt-6 font-display text-5xl leading-[1.05] text-[#f7ece1] md:text-7xl">
+        <div className="relative mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-center px-6 py-20 md:py-28">
+          <p className="inline-flex w-fit items-center gap-3 rounded-full border border-[#f7ece1]/20 bg-[#2a0f16]/30 px-4 py-2 text-[11px] uppercase tracking-[0.25em] text-[#f7ece1]/90 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-rosegold" aria-hidden="true" />
+            Makeup Artistry by Shweta <span className="text-rosegold">·</span> Meerut
+          </p>
+          <h1 className="mt-7 max-w-2xl font-display text-5xl leading-[1.02] text-[#f7ece1] md:text-7xl">
             For the
             <span className="block italic text-rosegold">Bride in You</span>
           </h1>
-          <div className="mt-8 h-px w-16 bg-rosegold" aria-hidden />
-          <p className="mt-8 max-w-md text-base leading-relaxed text-[#f7ece1]/80 md:text-lg">
+          <div className="mt-7 flex items-center gap-3" aria-hidden="true"><span className="h-px w-12 bg-rosegold" /><span className="h-1.5 w-1.5 rounded-full bg-rosegold" /></div>
+          <p className="mt-7 max-w-lg text-base leading-relaxed text-[#f7ece1]/85 md:text-lg">
             Not just applied. Felt. Remembered. Bridal, pre-bridal and festive makeup in HD and airbrush finishes — styled around you after a personal conversation before every booking.
           </p>
-          <BookNowButton name="an appointment" className="mt-10 w-fit" />
-          <p className="mt-12 text-[11px] uppercase tracking-[0.3em] text-[#f7ece1]/50">Bridal · Pre-bridal · Festive · Hair · Nails</p>
+          <div className="mt-9 flex flex-wrap items-center gap-4">
+            <BookNowButton name="an appointment" className="px-8 py-3.5" />
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-full border border-[#f7ece1]/35 px-7 py-3.5 text-sm font-medium text-[#f7ece1] transition hover:border-[#f7ece1]/70 hover:bg-[#f7ece1]/10">
+              Explore services <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <div className="mt-11 flex flex-wrap gap-x-5 gap-y-2 text-[10px] uppercase tracking-[0.22em] text-[#f7ece1]/65 md:text-xs">
+            <span>Bridal</span><span aria-hidden="true" className="text-rosegold">✦</span>
+            <span>Pre-bridal</span><span aria-hidden="true" className="text-rosegold">✦</span>
+            <span>Festive</span><span aria-hidden="true" className="text-rosegold">✦</span>
+            <span>Hair &amp; Nails</span>
+          </div>
         </div>
       </section>
 
