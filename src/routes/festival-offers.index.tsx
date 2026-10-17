@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { meta } from "@/components/detail-pages";
 import { BookNowButton, Eyebrow, PageHeader } from "@/components/site";
-import { OFFER_VALID_UNTIL, formatINR, images, packages } from "@/lib/site";
+import { OFFER_VALID_UNTIL, formatINR, packages } from "@/lib/site";
 
 export const Route = createFileRoute("/festival-offers/")({
   head: () => meta("Karva Chauth Special Offer | Makeup Artistry by Shweta", `Five festive beauty packages from ₹499 in Meerut. Valid until ${OFFER_VALID_UNTIL}.`),
@@ -13,7 +13,6 @@ function Offers() {
     <>
       <PageHeader eyebrow={`Valid until ${OFFER_VALID_UNTIL}`} title="Karva Chauth Special Offer" intro="Glow for the festival with a package made for the occasion." />
       <section className="mx-auto max-w-6xl px-6 py-14">
-        <img src={images.brideRedGold} alt="Festive look in red and gold" className="mx-auto mb-12 aspect-[16/9] w-full max-w-3xl rounded-3xl object-cover object-top shadow-soft" />
         <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <Eyebrow>Explore packages</Eyebrow>
