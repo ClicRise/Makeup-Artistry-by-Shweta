@@ -37,7 +37,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-4 rounded-3xl bg-primary px-6 py-10 text-center text-primary-foreground md:mx-auto md:max-w-6xl">
+      <section className="mx-4 mt-8 rounded-3xl bg-primary px-6 py-10 text-center text-primary-foreground md:mx-auto md:max-w-6xl">
         <p className="text-xs uppercase tracking-[0.3em] opacity-80">Festival offers</p>
         <h2 className="mt-2 font-display text-3xl md:text-4xl">Karva Chauth Special — packages from ₹499</h2>
         <p className="mt-2 opacity-80">Valid until {OFFER_VALID_UNTIL}</p>
